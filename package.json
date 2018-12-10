@@ -1,5 +1,5 @@
 {
-  "name": "AwesomeProject",
+  "name": "Xuka_mobile",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -14,7 +14,7 @@
     "react-native-gesture-handler": "^1.0.10",
     "react-native-material-design": "^0.3.7",
     "react-native-simple-login": "^1.1.0",
-    "react-native-timer-countdown": "^2.0.3",
+    "react-native-timer-countdown": "^react-native link\n2.0.3",
     "react-navigation": "^3.0.7",
     "react-router-native": "^4.3.0"
   },

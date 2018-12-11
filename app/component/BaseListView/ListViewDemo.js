@@ -12,23 +12,15 @@ class FlatListItem extends Component{
                 flex: 1,
                 flexDirection: 'column'
             }}>
-                {/*<View style={{*/}
-                    {/*flex:1,*/}
-                    {/*flexDirection: 'row'*/}
-                {/*}}>*/}
 
-                    {/*<Text style={styles.flatitem}>{this.props.item.id}</Text>*/}
-
-                    {/*<View style={{*/}
-                        {/*flex: 1,*/}
-                        {/*flexDirection: 'row',*/}
-                        {/*height: 70*/}
-
-                    {/*}}>*/}
-                        <Text style={styles.flatitem}>{this.props.item.id +"   "+ this.props.item.name +"   "+ this.props.item.status}</Text>
-                        {/*<Text style={styles.flatitem}>{this.props.item.status}</Text>*/}
-                    {/*</View>*/}
-                {/*</View>*/}
+                <Text style={styles.flatitem}>
+                    <Image resizeMode="contain" style={{
+                        width: 40,
+                        height: 40
+                    }} source={require('../../image/avata.png')}/>
+                    <Text>{"           "}</Text>
+                    <Text style={{color: 'rgba(157, 166, 169, 1)'}}>{this.props.item.name}</Text>
+                </Text>
 
                 <View style={{
                     backgroundColor: 'white',
@@ -84,7 +76,7 @@ export default class BasicFlatList extends Component {
 const styles = StyleSheet.create({
     flatitem: {
         color: 'black',
-        padding: 10,
+        padding: 11,
         fontSize: 14,
         backgroundColor: '#CFD8DC'
     }

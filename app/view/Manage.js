@@ -4,6 +4,8 @@ import MyButton from "../component/MyButton";
 import ListItem from "react-native/local-cli/templates/HelloNavigation/components/ListItem";
 import BasicFlatList from "../component/BaseListView/ListViewDemo";
 import styles from "../component/MySites/styles";
+import MyButton2 from "../component/MyButton/button2";
+import MyButton3 from "../component/MyButton/button3";
 
 type Props = {};
 
@@ -22,16 +24,26 @@ class Manage extends React.Component {
         return (
             <Fragment>
                 <View style={styles.header}>
-                    <MyButton text={`LOG OUT`} myPress={() => {}} />
-                    <MyButton text={`START`} myPress={() => {}} />
+                    <MyButton2 text={`NGHỈ CA`} myPress={() => {}} />
+                    <MyButton2 text={`START`} myPress={() => this.props.navigation.navigate('AcceptCustomer')} />
                 </View>
-                <BasicFlatList style={styles.body}/>
+                <View style={styles.body}>
+                    <View style={{
+                        flex: 1,
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                        alignItems: 'stretch',
+                        width: 400
+                    }}>
+                        <BasicFlatList/>
+                    </View>
+                </View>
                 <View style={styles.end}>
-                    <View style={styles.mp_Child_Container}>
+                    <View>
                         <MyButton text={`Manage`} myPress={() => {}} />
                     </View>
-                    <View style={styles.mp_Child_Container}>
-                        <MyButton text={`Profile`} myPress={() => {}} />
+                    <View>
+                        <MyButton3 text={`Profile`} myPress={() => {}} />
                     </View>
                 </View>
             </Fragment>

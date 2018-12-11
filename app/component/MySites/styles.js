@@ -1,12 +1,12 @@
 export default {
     header: {
-        height: 130,
+        height: 100,
         flexDirection: 'row',
         justifyContent: 'space-between'
         // justifyContent: 'space-evenly'
     },
     body:{
-        height:400,
+        height:430,
         // backgroundColor: 'blue',
         alignItems: 'center'
     },

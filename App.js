@@ -97,14 +97,24 @@ import Main from "./app/view/Main";
 import Login from "./app/view/login";
 import Working from "./app/view/Working";
 import InWorking from "./app/view/InWorking";
-import Manage from "./app/view/Manage"; // Version can be specified in package.json
+import Manage from "./app/view/Manage";
+import AcceptCustomer from "./app/view/AcceptCustomer";
+import TestApp from "./app/view/StopWatch"; // Version can be specified in package.json
 
 class HomeScreen extends React.Component {
     render() {
         return (
-
-            <Main/>
+            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                <Text>Home Screen</Text>
+                <Button
+                    title="Go to Details"
+                    onPress={() => this.props.navigation.navigate('Details')}
+                />
+            </View>
         );
+        // return(
+        //     <Manage/>
+        // );
     }
 }
 
@@ -115,7 +125,7 @@ class DetailsScreen extends React.Component {
                 <Text>Details Screen</Text>
                 <Button
                     title="Go to Details... again"
-                    onPress={() => this.props.navigation.navigate('Login')}
+                    onPress={() => this.props.navigation.navigate('Main')}
                 />
             </View>
         );
@@ -125,10 +135,15 @@ class DetailsScreen extends React.Component {
 const RootStack = createStackNavigator(
     {
         Home: HomeScreen,
+        TestApp: TestApp,
         Details: DetailsScreen,
-        Mainabc: Manage,
+        Manage_Working: Manage,
+        Main: Main,
         Login: Login,
+        Working:Working,
+        AcceptCustomer: AcceptCustomer,
         InWorking: InWorking,
+
     },
     {
         initialRouteName: 'Home',

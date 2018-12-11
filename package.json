@@ -11,11 +11,13 @@
     "react": "16.6.1",
     "react-native": "0.57.7",
     "react-native-countdown-component": "^1.8.3",
+    "react-native-elements": "^0.19.1",
     "react-native-gesture-handler": "^1.0.10",
     "react-native-material-design": "^0.3.7",
     "react-native-simple-login": "^1.1.0",
     "react-native-stopwatch-timer": "0.0.20",
     "react-native-timer-countdown": "^react-native link\n2.0.3",
+    "react-native-vector-icons": "^6.1.0",
     "react-navigation": "^3.0.7",
     "react-router-native": "^4.3.0"
   },

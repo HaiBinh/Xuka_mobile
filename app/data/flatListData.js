@@ -2,7 +2,7 @@ const flatListData = [
     {
         "id": "1",
         "name": "Nguyen Van A",
-        "status": "Busy"
+        "status": "Ready"
     },
     {
         "id": "2",

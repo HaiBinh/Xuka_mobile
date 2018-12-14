@@ -6,6 +6,8 @@ import BasicFlatList from "../component/BaseListView/ListViewDemo";
 import styles from "../component/MySites/styles";
 import MyButton2 from "../component/MyButton/button2";
 import MyButton3 from "../component/MyButton/button3";
+import Button_Accept from "../component/MyButton/button_accept";
+import Button_Refuse from "../component/MyButton/button_refuse";
 
 type Props = {};
 
@@ -25,7 +27,17 @@ class Manage extends React.Component {
             <Fragment>
                 <View style={styles.header}>
                     <MyButton2 text={`NGHỈ CA`} myPress={() => {}} />
-                    <MyButton2 text={`START`} myPress={() => this.props.navigation.navigate('AcceptCustomer')} />
+                    {/*<MyButton2 text={`START`} myPress={() => this.props.navigation.navigate('AcceptCustomer')} />*/}
+                </View>
+                <View style={{
+                    flex: 1,
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    height: 30
+                }}>
+                    <Button_Accept text={'NHẬN KHÁCH'} myPress={() => this.props.navigation.navigate('AcceptCustomer')}/>
+                    <Button_Refuse text={'TỪ CHỐI'} myPress={() => this.props.navigation.navigate('Refuse')}/>
                 </View>
                 <View style={styles.body}>
                     <View style={{
@@ -43,7 +55,7 @@ class Manage extends React.Component {
                         <MyButton text={`Manage`} myPress={() => {}} />
                     </View>
                     <View>
-                        <MyButton3 text={`Profile`} myPress={() => {}} />
+                        <MyButton3 text={`Profile`} myPress={() => this.props.navigation.navigate('Profile_KTV')} />
                     </View>
                 </View>
             </Fragment>

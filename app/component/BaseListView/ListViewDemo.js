@@ -5,6 +5,12 @@ import getUserFromServer from "../../network/server";
 // import FlatListItem from '../../data/FlatListItem';
 
 class FlatListItem extends Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+
+        };
+    }
 
     render(){
         return(
@@ -36,24 +42,24 @@ class FlatListItem extends Component{
 
 export default class BasicFlatList extends Component {
 
-    // constructor(props) {
-    //     super(props);
-    //     this.state = ({
-    //         userFromServer: []
-    //     })
-    // }
-    //
-    // componentDidMount(): void {
-    //     this.refreshDataFromServer();
-    // }
-    //
-    // refreshDataFromServer = () => {
-    //     getUserFromServer().then((users) => {
-    //         this.setState({userFromServer: users});
-    //     }).catch((error) => {
-    //         this.setState({userFromServer: []});
-    //     });
-    // }
+    constructor(props) {
+        super(props);
+        this.state = ({
+            userFromServer: []
+        })
+    }
+
+    componentDidMount(): void {
+        this.refreshDataFromServer();
+    }
+
+    refreshDataFromServer = () => {
+        getUserFromServer().then((users) => {
+            this.setState({userFromServer: users});
+        }).catch((error) => {
+            this.setState({userFromServer: []});
+        });
+    };
 
     render() {
         return (

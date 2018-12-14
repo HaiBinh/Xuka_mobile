@@ -84,7 +84,7 @@ class Working extends React.Component {
                         <MyButton text={`Manage`} myPress={() => this.props.navigation.navigate('Main')} />
                     </View>
                     <View>
-                        <MyButton3 text={`Profile`} myPress={() => {}} />
+                        <MyButton3 text={`Profile`} myPress={() => this.props.navigation.navigate('Profile_KTV')} />
                     </View>
                 </View>
             </Fragment>

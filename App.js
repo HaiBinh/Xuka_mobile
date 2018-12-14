@@ -95,11 +95,14 @@ import { Button, View, Text } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import Main from "./app/view/Main";
 import Login from "./app/view/login";
+import LoginForm from "./app/view/LoginForm";
 import Working from "./app/view/Working";
 import InWorking from "./app/view/InWorking";
 import Manage from "./app/view/Manage";
+import Refuse from "./app/view/Refuse";
 import AcceptCustomer from "./app/view/AcceptCustomer";
-import TestApp from "./app/view/StopWatch"; // Version can be specified in package.json
+import TestApp from "./app/view/StopWatch";
+import Profile from "./app/view/Profile"; // Version can be specified in package.json
 
 class HomeScreen extends React.Component {
     render() {
@@ -125,7 +128,7 @@ class DetailsScreen extends React.Component {
                 <Text>Details Screen</Text>
                 <Button
                     title="Go to Details... again"
-                    onPress={() => this.props.navigation.navigate('Main')}
+                    onPress={() => this.props.navigation.navigate('LoginScreen')}
                 />
             </View>
         );
@@ -139,10 +142,12 @@ const RootStack = createStackNavigator(
         Details: DetailsScreen,
         Manage_Working: Manage,
         Main: Main,
-        Login: Login,
+        LoginScreen: Login,
         Working:Working,
         AcceptCustomer: AcceptCustomer,
         InWorking: InWorking,
+        Refuse: Refuse,
+        Profile_KTV: Profile,
 
     },
     {

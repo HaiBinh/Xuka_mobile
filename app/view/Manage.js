@@ -19,6 +19,7 @@ class Manage extends React.Component {
         const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
         this.state = {
             dataSource: ds.cloneWithRows(['row 1', 'row 2']),
+            showcp: true,
         };
     }
 
@@ -27,6 +28,7 @@ class Manage extends React.Component {
             <Fragment>
                 <View style={styles.header}>
                     <MyButton2 text={`NGHỈ CA`} myPress={() => {}} />
+                    {/*<MyButton2 text={`NGHỈ CA`} onPress={this.onPress()} />*/}
                     {/*<MyButton2 text={`START`} myPress={() => this.props.navigation.navigate('AcceptCustomer')} />*/}
                 </View>
                 <View style={{
@@ -36,8 +38,9 @@ class Manage extends React.Component {
                     alignItems: 'center',
                     height: 30
                 }}>
+                    {/*{this.state.showcp}*/}
                     <Button_Accept text={'NHẬN KHÁCH'} myPress={() => this.props.navigation.navigate('AcceptCustomer')}/>
-                    <Button_Refuse text={'TỪ CHỐI'} myPress={() => this.props.navigation.navigate('Refuse')}/>
+                    <Button_Refuse text={'TỪ CHỐI'} myPress={() => this .props.navigation.navigate('Refuse')}/>
                 </View>
                 <View style={styles.body}>
                     <View style={{

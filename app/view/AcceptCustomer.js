@@ -134,6 +134,7 @@ import ListItem from "react-native/local-cli/templates/HelloNavigation/component
 import BasicFlatList from "../component/BaseListView/ListViewDemo";
 import MyButton2 from "../component/MyButton/button2";
 import MyButton3 from "../component/MyButton/button3";
+import Button_Ac from "../component/MyButton/button_ac";
 
 
 class MyRadio extends Component {
@@ -268,9 +269,9 @@ export default class AcceptCustomer extends React.Component {
                         </View>
                     </View>
                     <View style={{padding: 15}}>
-                        <MyButton
+                        <Button_Ac
                             text={'NHẬN KHÁCH'}
-                            style={{alignSelf: 'center', backgroundColor: '#0091d0', borderRadius: 5, paddingLeft: 15, paddingRight: 15}}
+                            // style={{alignSelf: 'center', backgroundColor: '#0091d0', borderRadius: 5, paddingLeft: 15, paddingRight: 15}}
                             textStyle={{fontSize: 13}}
                             // myPress={(this._getData) => {this.props.navigation.navigate('Working')}}
                             myPress={() => {this.props.navigation.navigate('Working')}}

@@ -102,7 +102,9 @@ import Manage from "./app/view/Manage";
 import Refuse from "./app/view/Refuse";
 import AcceptCustomer from "./app/view/AcceptCustomer";
 import TestApp from "./app/view/StopWatch";
-import Profile from "./app/view/Profile"; // Version can be specified in package.json
+import Profile from "./app/view/Profile";
+import A from "./app/view/test";
+import ChangePass from "./app/view/ChangePass"; // Version can be specified in package.json
 
 class HomeScreen extends React.Component {
     render() {
@@ -137,28 +139,31 @@ class DetailsScreen extends React.Component {
 
 const RootStack = createStackNavigator(
     {
-        Home: HomeScreen,
-        TestApp: TestApp,
-        Details: DetailsScreen,
+        // Home: HomeScreen,
+        // TestApp: TestApp,
+        // Details: DetailsScreen,
+        LoginScreen: Login,
         Manage_Working: Manage,
         Main: Main,
-        LoginScreen: Login,
         Working:Working,
         AcceptCustomer: AcceptCustomer,
         InWorking: InWorking,
         Refuse: Refuse,
         Profile_KTV: Profile,
+        ChangePass: ChangePass,
 
     },
     {
-        initialRouteName: 'Home',
+        initialRouteName: 'LoginScreen',
     }
 );
 
 const AppContainer = createAppContainer(RootStack);
 
+
+
 export default class App extends React.Component {
     render() {
-        return <AppContainer />;
+        return <AppContainer/>;
     }
 }

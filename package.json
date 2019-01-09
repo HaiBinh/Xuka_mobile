@@ -1,5 +1,5 @@
 {
-  "name": "Xuka_mobile",
+  "name": "AwesomeProject",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "react": "16.6.1",
-    "react-native": "0.57.7",
+    "react-native": "^0.57.7",
     "react-native-countdown-component": "^1.8.3",
     "react-native-elements": "^0.19.1",
     "react-native-gesture-handler": "^1.0.10",
@@ -19,7 +19,8 @@
     "react-native-timer-countdown": "^react-native link\n2.0.3",
     "react-native-vector-icons": "^6.1.0",
     "react-navigation": "^3.0.7",
-    "react-router-native": "^4.3.0"
+    "react-router-native": "^4.3.0",
+    "rename": "^1.0.4"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",

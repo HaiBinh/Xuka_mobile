@@ -10,13 +10,15 @@ import {
     SpringAnimationConfig as delay
 } from 'react-native';
 
-// const apiGetUser = 'http://iwct.pywolf.com/api/v1/ktv/';
-// const apiGetUser = 'http://192.168.1.5:8000/api/v1/ktv/';
-const apiGetUser = 'http://10.20.16.121:8000/api/v1/user/';
+const username = 6;
+
+// const apiGetUser = 'http://iwct.pywolf.com/api/v1/ktv/?id=' + username;
+const apiGetUser = 'http://10.20.16.121:8000/api/v1/user/?id=' + username;
+// const apiGetUser = 'http://192.168.1.6:8000/api/v1/ktv/?id=' + username;
 
 //     const apiGetUser = 'https://facebook.github.io/react-native/movies.json';
 //     const apiGetUser = 'https://pokeapi.co/api/v2/pokemon/'
-async function getUserFromServer() {
+async function getUserFromServer2() {
     // try {
     //     let response = await fetch(apiGetUser).then(r => console.log(r)).catch(e => console.log(e));
     //     let responseJson = await response.json().then(r => console.log(r));
@@ -54,4 +56,4 @@ async function getUserFromServer() {
     //     });
 }
 
-export default getUserFromServer;
+export default getUserFromServer2;

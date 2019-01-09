@@ -52,3 +52,18 @@ const flatListData = [
 ];
 
 module.exports = flatListData;
+// const flatListData = {
+//     ktv1: {
+//         id: 1,
+//         name: 'A'
+//     },
+//     ktv2:{
+//         id:2,
+//         name: 'B'
+//     },
+//     ktv3:{
+//         id:3,
+//         name: 'C'
+//     }
+// }
+// export default flatListData;

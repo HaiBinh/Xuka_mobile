@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import {View, Text, TextInput, Image, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import MyButton from '../component/MyButton';
+import Button_RF from "../component/MyButton/button_rf";
+import flatListData from "../data/flatListData";
 
 
 class MyRadio extends Component {
@@ -154,13 +156,13 @@ export default class Refuse extends Component {
                                  label={"Khách chọn nhân viên khác"} />
                     </View>
                     <View style={{marginTop: 10, display: data == 'reselect' ? 'flex' : 'none'}}>
-                        <Dropdown label={"Chon Nhan Vien"} data={{a: {label: 'Khach A', value: 'khacka'}, b: {label: 'Kach B', value: 'khachb'}}} />
+                        <Dropdown label={"Chon Nhan Vien"} data={flatListData} />
                     </View>
                 </View>
                 <View style={{padding: 15}}>
-                    <MyButton
+                    <Button_RF
                         text={'TỪ CHỐI'}
-                        style={{alignSelf: 'center', backgroundColor: '#e45951', borderRadius: 5, paddingLeft: 15, paddingRight: 15}}
+                        // style={{alignSelf: 'center', backgroundColor: '#e45951', borderRadius: 5, paddingLeft: 15, paddingRight: 15}}
                         textStyle={{fontSize: 13}}
                         myPress={() => {this.props.navigation.navigate('Main')}}
                     />
@@ -179,9 +181,9 @@ const styles = {
         borderWidth: 1,
         borderColor: "#cdcdcd",
     },
-    active: {
-        backgroundColor: '#a1f9b0'
-    },
+    // active: {
+    //     backgroundColor: '#a1f9b0',
+    // },
     radio: {
 
         width: 20,
